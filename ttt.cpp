@@ -1,4 +1,3 @@
-#include <ios>
 #include<iostream>
 #include<limits>
 using namespace std;
@@ -6,31 +5,17 @@ using namespace std;
 //Checks for win and loss
 bool win(int t[3][3])
 {
-    //Checks the diagonal
-    if(t[0][0] == t[1][1] && t[1][1] == t[2][2] && t[2][2] == 2)return true;
-    else if(t[0][0] && t[1][1] && t[1][1] == t[2][2] && t[1][1] == 3)return true;
-    //Checks the other diagonal
-    else if(t[2][0] == t[1][1] && t[0][2] == t[1][1] && t[1][1] == 2)return true;
-    else if(t[2][0] == t[1][1] && t[0][2] == t[1][1] && t[1][1] == 3)return true;
-    //Checks the top row
-    else if(t[0][0] == t[0][1] && t[0][2] == t[0][1] && t[0][2] == 2)return true;
-    else if(t[0][0] == t[0][1] && t[0][2] == t[0][1] && t[0][2] == 3)return true;
-    //Checks the middle row
-    else if(t[1][0] == t[1][1] && t[1][2] == t[1][1] && t[1][2] == 2)return true;
-    else if(t[1][0] == t[1][1] && t[1][2] == t[1][1] && t[1][2] == 3)return true;
-    //Check the bottom row
-    else if(t[2][0] == t[2][1] && t[2][2] == t[2][1] && t[2][2] == 2)return true;
-    else if(t[2][0] == t[2][1] && t[2][2] == t[2][1] && t[2][2] == 3)return true;
-
-    //Checks the left column
-    else if(t[0][0] == t[1][0] && t[2][0] == t[1][0] && t[0][0] == 2)return true;
-    else if(t[0][0] == t[1][0] && t[2][0] == t[1][0] && t[0][0] == 3)return true;
-    //Checks the middle column
-    else if(t[0][1] == t[1][1] && t[2][1] == t[1][1] && t[1][1] == 2)return true;
-    else if(t[0][1] == t[1][1] && t[2][1] == t[1][1] && t[1][1] == 3)return true;
-    //Checks the right column
-    else if(t[0][2] == t[1][2] && t[2][2] == t[2][2] && t[2][2] == 2)return true;
-    else if(t[0][2] == t[1][2] && t[2][2] == t[2][2] && t[2][2] == 3)return true;
+    for(int i = 0; i<=2; i++)
+    {
+        if(t[i][0] == t[i][1] && t[i][1] == t[i][2] && t[i][1] == 2)return true;
+        if(t[i][0] == t[i][1] && t[i][1] == t[i][2] && t[i][1] == 3)return true;
+        if(t[0][i] == t[1][i] && t[1][i] == t[2][i] && t[2][i] == 2)return true;
+        if(t[0][i] == t[1][i] && t[1][i] == t[2][i] && t[2][i] == 3)return true;
+    }
+    if(t[1][1] == t[2][2] && t[2][2] == t[0][0] && t[2][2] == 2)return true;
+    else if(t[1][1] == t[2][2] && t[2][2] == t[0][0] && t[2][2] == 3)return true;
+    else if(t[0][2] == t[2][2] && t[1][1] == t[2][0] && t[1][1] == 2)return true;
+    else if(t[0][2] == t[2][2] && t[1][1] == t[2][0] && t[1][1] == 3)return true;
     return false;
 }
 //Check if the element is empty or not
