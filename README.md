@@ -18,17 +18,17 @@ Drop these commands in your terminal to run the game:
 
 **Step 1. Clone the repo:**
 ```bash
-git clone [https://github.com/Amorphous7473/Terminal-Tic-Tac-Toe](https://github.com/Amorphous7473/Terminal-Tic-Tac-Toe)
+git clone git@github.com:Amorphous7473/Tic-Tac-Toe-cli.git
 ```
 
 **Step 2. CD into the repo:**
 ```bash
-cd Terminal-Tic-Tac-Toe
+cd Terminal-Tic-Tac-Toe-cli
 ```
 
 **Step 3. Compile and run the program:**
 ```bash
-g++ tictactoe.cpp -o main && ./main
+g++ ttt.cpp -o main && ./main
 ```
 
 Thank you.
