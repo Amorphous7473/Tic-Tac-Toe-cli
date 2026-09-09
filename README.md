@@ -18,7 +18,7 @@ Drop these commands in your terminal to run the game:
 
 **Step 1. Clone the repo:**
 ```bash
-git clone github.com/Amorphous7473/Tic-Tac-Toe-cli.git
+git clone github.com/Amorphous7473/Tic-Tac-Toe-cli
 ```
 
 **Step 2. CD into the repo:**
