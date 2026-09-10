@@ -106,7 +106,7 @@ void ttt()
             if(win(t))
             {
                 cout<<"X wins!";
-                break;
+                return;
             }
         }
         }
@@ -132,12 +132,12 @@ void ttt()
             if(win(t))
             {
                 cout<<"O Wins!";
-                break;
+                return;
             }
         }
         }
     }
-
+cout<<"It is a draw";
 
 }
 //main function
