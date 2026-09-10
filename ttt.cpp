@@ -14,8 +14,8 @@ bool win(int t[3][3])
     }
     if(t[1][1] == t[2][2] && t[2][2] == t[0][0] && t[2][2] == 2)return true;
     if(t[1][1] == t[2][2] && t[2][2] == t[0][0] && t[2][2] == 3)return true;
-    if(t[0][2] == t[2][2] && t[1][1] == t[2][0] && t[1][1] == 2)return true;
-    if(t[0][2] == t[2][2] && t[1][1] == t[2][0] && t[1][1] == 3)return true;
+    if(t[0][2] == t[1][1] && t[1][1] == t[2][0] && t[1][1] == 2)return true;
+    if(t[0][2] == t[1][1] && t[1][1] == t[2][0] && t[1][1] == 3)return true;
     return false;
 }
 //Check if the element is empty or not
